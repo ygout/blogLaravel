@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Un deux trois Quatre
+                    Un Deux
                 </div>
 
                 <div class="links">
