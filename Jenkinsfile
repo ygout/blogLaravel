@@ -1,15 +1,15 @@
 pipeline {
-  agent any
-triggers{
-	pollSCM('* * * * *')
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'composer install'
+    agent any 
+    triggers{
+    	pollSCM('* * * * *')
       }
-    }
-	stage('Lauch test'){
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'composer install'
+            }
+        }
+        stage('Lauch test'){
             steps {
                 sh './vendor/bin/phpunit'
             }
@@ -20,4 +20,5 @@ triggers{
                 sh 'rocketeer deploy --host="192.168.32.10" --password="6fe7b5d4f79c9ddd94b4a8f7" --key=""'
             }
         }
+    }
 }
