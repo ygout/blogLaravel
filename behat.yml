@@ -1,0 +1,15 @@
+behat.yml  :
+  default:
+    extensions:
+      Laracasts\Behat:
+          #env_path: .env_path
+      Behat\MinkExtension:
+          default_session: laravel
+          base_url: http://localhost:8080
+          laravel: ~
+
+
+
+  triggers {
+    pollSCM('* * * * *')
+  }
