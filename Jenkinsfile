@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'rocketeer deploy --host="192.168.32.10" --password="6fe7b5d4f79c9ddd94b4a8f7" --key=""'
+        sh 'rocketeer deploy --host="192.168.32.10" --password="6fe7b5d4f79c9ddd94b4a8f7" --key="" --repository="https://github.com/ygout/blogLaravel.git" --branch="master"'
       }
     }
   }
